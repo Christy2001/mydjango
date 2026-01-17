@@ -25,8 +25,11 @@ SECRET_KEY = 'django-insecure-d4#1%1v03b804(g*k_@!_%3+nd-f)aa=1p)c(b3%+893t=n_q^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
-
+ALLOWED_HOSTS = [
+    'crizvlogz.pythonanywhere.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 # Application definition
 
