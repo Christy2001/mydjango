@@ -1,31 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Food Stories Blog</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Food Stories Blog</a></h1>
-        </header>
-
-        <article>
-            <time>published: 17.01.2026, 12:14</time>
-            <h2><a href="">My first food story</a></h2>
-            <p>
-                This is a story about my love for street food. From hot samosas
-                to spicy chicken biriyani, every bite carries memories of
-                evening walks and happy conversations with friends.
-            </p>
-        </article>
-
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">A taste of home</a></h2>
-            <p>
-                Home-cooked food has a special place in my heart. The aroma of
-                curry, fresh rice, and homemade pickles always reminds me of
-                family, comfort, and warmth.
-            </p>
-        </article>
-    </body>
-</html>
+{% extends 'blog/base.html' %}
+{% block content %}
+  {% for post in posts %}
+            <article class="post">
+                <time>published: {{ post.published_date }}</time>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+{% endblock %}
