@@ -8,16 +8,17 @@
     </head>
     <body>
     <header class="page-header">
-      <div class="container">
-          <h1><a href="/">Taste of India</a></h1>
-      </div>
+      <div class="container header-bar">
+        <h1><a href="/">Taste of India</a></h1>
+        <a href="{% url 'post_new' %}" class="add-post">
+           <span>Add Post</span>
+            </a>
+        </div>
+          </header>
     </header>
-    <main class="container">
-        <div class="row">
-            <div class="col">
+    <main class="main-content">
             {% block content %}
             {% endblock %}
-            </div>
-        </div>
     </main>
 </body>
+</html>

@@ -57,14 +57,125 @@ body {
     margin-top: 15px;
 }
 
-/* ===== Buttons (future use) ===== */
-.btn-secondary {
-    background-color: transparent;
-    color: #2563eb;
-    border: 1px solid #2563eb;
+.main-content {
+    min-height: calc(100vh - 80px); /* header height */
 }
 
-.btn-secondary:hover {
-    background-color: #2563eb;
-    color: #ffffff;
+
+
+
+/* ===== Buttons (future use) ===== */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding:40px  0;
+    margin-top: 0;
+
+    min-height:70vh;   /* 🔥 THIS IS IMPORTANT */
+
+    background-image: url("../images/bg.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+
+/* Form card */
+.form-box {
+    width: 90%;
+    max-width: 480px;
+
+    padding: 30px;
+
+    background: rgba(215, 45, 45, 0.85);
+    backdrop-filter: blur(10px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(53, 17, 233, 0.15);
+
+    color: #ffffff;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.form-box h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+
+
+
+/* Labels */
+.post-form label {
+    font-size: 15px;
+    font-weight: 600;
+    opacity:0.9;
+    margin-bottom: 7px;
+}
+
+/* Inputs */
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: box-shadow 0.2s ease;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+
+/* Button spacing */
+.post-form button {
+    width: 50%;
+    background-color: rgba(29, 19, 212, 0.9);
+    display: block;
+    margin: auto;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.add-post {
+    text-decoration: none;
+    color: rgb(14, 3, 3);
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgb(226, 228, 85);
+    padding: 6px 10px;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+.add-post:hover {
+    background-color: hsla(238, 51%, 55%, 0.722);
+}
+
+
